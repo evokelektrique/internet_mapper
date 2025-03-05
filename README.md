@@ -16,7 +16,7 @@ IPMapper is an Elixir-based tool that generates incremental IP addresses, perfor
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/evokelektrique/ip_mapper.git
+   git clone https://github.com/evokelektrique/internet_mapper.git
    cd ip_mapper
    ```
 
