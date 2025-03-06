@@ -1,28 +1,28 @@
-defmodule IPMapper.MixProject do
+defmodule InternetMapper.MixProject do
   use Mix.Project
 
   def project do
     [
       app: :internet_mapper,
       version: "0.1.0",
-      elixir: "~> 1.18",
+      elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
   end
 
-  # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [:logger, :mnesia],
+      mod: {InternetMapper.Application, []}
     ]
   end
 
-  # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:mint, "~> 1.4"},
-      {:gen_stage, "~> 1.1"}
+      {:finch, "~> 0.10"},
+      {:flow, "~> 1.2"},
+      {:memento, "~> 0.5"}
     ]
   end
 end
