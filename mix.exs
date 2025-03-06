@@ -4,7 +4,7 @@ defmodule InternetMapper.MixProject do
   def project do
     [
       app: :inetnet_mapper,
-      version: "0.1.0",
+      version: "0.2.0",
       elixir: "~> 1.10",
       description: "A tool to map IPs, perform HTTP requests, and do reverse DNS lookups",
       package: package(),
