@@ -25,3 +25,5 @@ internet_mapper-*.tar
 results.csv
 
 .elixir_ls
+
+.mnesia

@@ -1,4 +1,4 @@
-defmodule IPMapper.MixProject do
+defmodule InternetMapper.MixProject do
   use Mix.Project
 
   def project do
@@ -21,19 +21,28 @@ defmodule IPMapper.MixProject do
   end
 
 
-  # Run "mix help compile.app" to learn about applications.
-  def application do
+  defp package do
     [
-      extra_applications: [:logger]
+      maintainers: ["Majid"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/evokelektrique/inetnet_mapper"}
     ]
   end
 
-  # Run "mix help deps" to learn about dependencies.
+
+  def application do
+    [
+      extra_applications: [:logger, :mnesia],
+      mod: {InternetMapper.Application, []}
+    ]
+  end
+
   defp deps do
     [
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
-      {:mint, "~> 1.4"},
-      {:gen_stage, "~> 1.1"}
+      {:finch, "~> 0.10"},
+      {:flow, "~> 1.2"},
+      {:memento, "~> 0.5"}
     ]
   end
 end
